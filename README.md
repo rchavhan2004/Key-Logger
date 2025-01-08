@@ -52,9 +52,9 @@ This project is designed as part of my *cybersecurity learning journey* to explo
 ---
 
 <p align="center">
-  <strong>🔒 Encrypt. Secure. Protect. 🔓</strong>
+  <strong>🔑 Every keystroke tells a story—capture it securely. 📄</strong>
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/04211271-83ef-4cb3-b5bc-1cc0b1609331" alt="Secure Icon" width="80">
+  <img src="https://github.com/user-attachments/assets/183d9fdb-36d0-4518-94b0-d3a1f72b0111" alt="Secure Icon" width="80">
 </p>
