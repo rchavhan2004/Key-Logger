@@ -1,0 +1,1 @@
+Keys which are going to be stroked are saved in text format here.
